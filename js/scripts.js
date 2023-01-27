@@ -62,19 +62,6 @@ PizzaOrder.prototype.assignCost = function() {
 
 
 
-// prototype for figure out pizza toppings
-// PizzaOrder.prototype.selectTopping = function() {
-//   const toppingSelection = document.querySelector("input[name='topping']:checked");
-
-//   if (toppingSelection.value = "none") {
-//     this.topping = "none";
-//   } else if (toppingSelection.value = "pepperoni") {
-//     this.topping = "pepperoni";
-//   }
-// }
-
-
-
 // User interface logic
 
 window.addEventListener("load", function () {
