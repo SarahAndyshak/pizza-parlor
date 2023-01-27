@@ -15,17 +15,13 @@ function handleSelection(event) {
   console.log(pizzaOrder);
 }
 
-function toppingSelection() {
-  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
-  console.log(toppingSelection);
+// testing selection manually
+function pizzaSelection() {
+  const toppingSelection = "pepperoni";
+  console.log("topping selection: ", toppingSelection);
+  const sizeSelection = "personal";
+  console.log("size selection: ", sizeSelection);
 }
-
-// function toppingSelection() {
-//   const toppingSelection = "pepperoni";
-//   console.log("topping selection: ", toppingSelection);
-//   const sizeSelection = "personal";
-//   console.log("size selection: ", sizeSelection);
-// }
 
 
 // prototype for figure out pizza toppings
