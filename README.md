@@ -94,3 +94,18 @@ pizzaSelection();
 Expected Outcome: topping selection: pepperoni, size selection: personal, PizzaOrder {topping: 'pepperoni', size: 'personal'}
 Key difference: added let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection)
   return pizzaOrder; in order to produce a new pizzaOrder object.
+
+<!--new prototype-->
+Describe: PizzaOrder.prototype.assignCost
+
+Test 1: "It should assign a cost based on topping and size."
+Code: const pizzaOrder = pizzaSelection();
+pizzaOrder.assignCost(pizzaSelection);
+Expected Outcome: "$5" since pizzaSelection is set as toppings: "none" and size "personal"
+Test failed: says pizzaOrder is not defined.
+
+Test 2: "It should assign a cost based on topping and size."
+Code: const pizzaOrder = pizzaSelection("none", "personal");
+pizzaOrder.assignCost();
+Expected Outcome: "$5"
+Test failed: says pizzaOrder is not defined.
