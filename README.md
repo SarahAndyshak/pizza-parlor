@@ -67,4 +67,4 @@ Test 2: "It should return the selected topping of the pizzaOrder object."
 Code: let pizzaOrder = let pizzaOrder = new PizzaOrder("pepperoni");
 pizzaOrder.selectTopping():
 Expected outcome: PizzaOrder {topping: "pepperoni", size: undefined}
-Actual outcome: test fails, function still returns "none." for topping.
+Actual outcome: test fails, function still returns "none." for topping as the result of the function, although pizzaOrder; returns PizzaOrder {topping: 'pepperoni', size: undefined} correctly
