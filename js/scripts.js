@@ -15,10 +15,8 @@ function handleSelection(event) {
   console.log("size selection: ", sizeSelection);
   let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection);
   return pizzaOrder;
+  // document.querySelector("div#show-price").append("cost"); // this isn't working, buttons don't seem to be functioning
 }
-
-// Need to test buttons by using this somewhere: document.querySelector("div#show-price").innerText(pizzaOrder);
-
 
 // testing selection of topping and size by manually declaring them, then creating new pizzOrder object
 function pizzaSelection() {
@@ -69,3 +67,4 @@ window.addEventListener("load", function () {
 })
 
 // I think the .append for cost will need to go here.
+// Need to test buttons by using this somewhere: document.querySelector("div#show-price").innerText(pizzaOrder);
