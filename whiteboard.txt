@@ -13,3 +13,9 @@ x submit button
 
 Need to add selection boxes for topping and size, put those functions into the prototypes
 Then write function or prototype to collect info and return a price. Will need to be if...else format
+
+Options:
+no toppings, personal pizza -- base price: $5
+no toppings, family pizza -- base price $10
+pepperoni, personal -- $2 topping, $5 size -- $7
+pepperoni, family -- $2 topping, $10 size -- $12

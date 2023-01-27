@@ -6,17 +6,37 @@ function PizzaOrder(topping, size) {
   this.size = size;
 }
 
-// prototype for selecting topping
-PizzaOrder.prototype.chooseTopping = function() {
+// prototype for figure out pizza toppings
+// PizzaOrder.prototype.selectTopping = function() {
+//   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+
+//   if (toppingSelection.value = "none") {
+//     this.topping = "none";
+//   } else if (toppingSelection.value = "pepperoni") {
+//     this.topping = "pepperoni";
+//   }
+// }
+
+PizzaOrder.prototype.selectTopping = function() {
+  let toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  if (toppingSelection.value = "none") {
+    this.topping = "none";
+  } else if (toppingSelection.value = "pepperoni") {
+    this.topping = "pepperoni";
+  }
+}
+
+//prototype for figureing out size
+
+
+// prototype for assigning cost
+PizzaOrder.prototype.assignCost = function() {
 
 }
 
-// prototype for selecting size
-
-// protype for assigning price
 
 
-// is this business or UI logic?
+// // is this business or UI logic? --- may not need this?
 function handleRadio(event) {
   event.preventDefault();
   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
@@ -26,7 +46,7 @@ function handleRadio(event) {
 // User interface logic
 
 
-window.addEventListener("load", function () {
-  this.document.getElementById("radio-topping").addEventListener("submit", handleRadio);
-  this.document.getElementById("radio-size").addEventListener("submit", handleRadio);
-})
+// window.addEventListener("load", function () {
+//   this.document.getElementById("radio-topping").addEventListener("submit", handleRadio); //-- update handleRadio??
+//   this.document.getElementById("radio-size").addEventListener("submit", handleRadio);
+// })

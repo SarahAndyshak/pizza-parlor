@@ -50,8 +50,15 @@ SOFTWARE.
 ## Test-Driven Development
 Describe: PizzaOrder()
 
-Test 1: It should set up the constructor to be used for pizza orders.
+Test 1: "It should set up the constructor to be used for pizza orders."
 Code: let pizzaOrder = new PizzaOrder();
 pizzaOrder;
-Expected Outcome: empty pizzaOrder object: PIzzaOrder {topping: undefined, size: undefined}
+Expected Outcome: empty pizzaOrder object: PizzaOrder {topping: undefined, size: undefined}
 Test passes
+
+Describe: PizzaOrder.prototype.selectTopping
+
+Test 1: "It should assign a topping selection to the pizzaOrder object."
+Code: let pizzaOrder = let pizzaOrder = new PizzaOrder();
+let toppingSelection.value = "none";
+Expected Outcome: PizzaOrder {topping: "none", size: undefined}
