@@ -21,6 +21,8 @@ function pizzaSelection() {
   console.log("topping selection: ", toppingSelection);
   const sizeSelection = "personal";
   console.log("size selection: ", sizeSelection);
+  let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection)
+  return pizzaOrder;
 }
 
 

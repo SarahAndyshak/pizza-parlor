@@ -86,3 +86,11 @@ const sizeSelection = "personal"; (console.log)
 pizzaSelection();
 Expected Outcome: topping selection: pepperoni, size selection: personal
 Test passes, but the only thing it's doing is declaring variables.
+
+Test 2: "It should create a pizzaOrder object with the declared variables."
+Code: const toppingSelection = "pepperoni"; (console.log)
+const sizeSelection = "personal"; (console.log)
+pizzaSelection();
+Expected Outcome: topping selection: pepperoni, size selection: personal, PizzaOrder {topping: 'pepperoni', size: 'personal'}
+Key difference: added let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection)
+  return pizzaOrder; in order to produce a new pizzaOrder object.
