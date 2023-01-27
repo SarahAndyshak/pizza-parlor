@@ -48,3 +48,10 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Test-Driven Development
+Describe: PizzaOrder()
+
+Test 1: It should set up the constructor to be used for pizza orders.
+Code: let pizzaOrder = new PizzaOrder();
+pizzaOrder;
+Expected Outcome: empty pizzaOrder object: PIzzaOrder {topping: undefined, size: undefined}
+Test passes
