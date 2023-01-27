@@ -6,9 +6,31 @@ function PizzaOrder(topping, size) {
   this.size = size;
 }
 
+// is this business -- it's getting values for topping and size
+function handleSelection(event) {
+  event.preventDefault();
+  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  const sizeSelection = document.querySelector("input[name='size']:checked").value;
+  let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection);
+  console.log(pizzaOrder);
+}
+
+function toppingSelection() {
+  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  console.log(toppingSelection);
+}
+
+// function toppingSelection() {
+//   const toppingSelection = "pepperoni";
+//   console.log("topping selection: ", toppingSelection);
+//   const sizeSelection = "personal";
+//   console.log("size selection: ", sizeSelection);
+// }
+
+
 // prototype for figure out pizza toppings
 // PizzaOrder.prototype.selectTopping = function() {
-//   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+//   const toppingSelection = document.querySelector("input[name='topping']:checked");
 
 //   if (toppingSelection.value = "none") {
 //     this.topping = "none";
@@ -28,15 +50,15 @@ function PizzaOrder(topping, size) {
 // }
 
 //not sure what to try next
-PizzaOrder.prototype.selectTopping = function() {
-  let toppingSelection = topping;
-  if (toppingSelection.value = "none") {
-    topping = "none";
-  } else if (toppingSelection.value = "pepperoni") {
-    topping = "pepperoni";
-  }
-  return topping;
-}
+// PizzaOrder.prototype.selectTopping = function() {
+//   let toppingSelection = topping;
+//   if (toppingSelection.value = "none") {
+//     topping = "none";
+//   } else if (toppingSelection.value = "pepperoni") {
+//     topping = "pepperoni";
+//   }
+//   return topping;
+// }
 
 // //prototype for figureing out size
 // PizzaOrder.prototype.selectSize = function() {
@@ -55,17 +77,10 @@ PizzaOrder.prototype.selectTopping = function() {
 
 
 
-// // is this business or UI logic? --- may not need this?
-// function handleRadio(event) {
-//   event.preventDefault();
-//   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
-//   const sizeSelection = document.querySelector("input[name='size']:checked").value;
-// }
+
 
 // User interface logic
 
-
-// window.addEventListener("load", function () {
-//   this.document.getElementById("radio-topping").addEventListener("submit", handleRadio); //-- update handleRadio??
-//   this.document.getElementById("radio-size").addEventListener("submit", handleRadio);
-// })
+window.addEventListener("load", function () {
+  this.document.getElementById("order").addEventListener("submit", handleSelection);
+})
