@@ -18,14 +18,23 @@ function PizzaOrder(topping, size) {
 // }
 
 //try w/o radio buttons
+// PizzaOrder.prototype.selectTopping = function() {
+//   let toppingSelection = topping;
+//   if (toppingSelection = "none") {
+//     return toppingSelection;
+//   } else if (toppingSelection = "pepperoni") {
+//     return toppingSelection;
+//   } 
+// }
+
 PizzaOrder.prototype.selectTopping = function() {
   let toppingSelection = topping;
-  if (toppingSelection = "none") {
-    this.topping = "none";
-  } else if (toppingSelection = "pepperoni") {
-    this.topping = "pepperoni";
+  if (toppingSelection.value = "none") {
+    topping = "none";
+  } else if (toppingSelection.value = "pepperoni") {
+    topping = "pepperoni";
   }
-  return this.topping;
+  return topping;
 }
 
 // //prototype for figureing out size
