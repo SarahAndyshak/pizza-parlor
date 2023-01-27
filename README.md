@@ -109,3 +109,9 @@ Code: const pizzaOrder = pizzaSelection("none", "personal");
 pizzaOrder.assignCost();
 Expected Outcome: "$5"
 Test failed: says pizzaOrder is not defined.
+
+Test 3: "It should assign a cost based on topping and size."
+Code: let pizzaOrder = pizzaSelection("none", "personal");
+pizzaOrder.assignCost();
+Expected Outcome: "$5"
+Actual Outcome: test passed, when the constructor was called and properties were assigned. Tested with other variables inputted, also passed.

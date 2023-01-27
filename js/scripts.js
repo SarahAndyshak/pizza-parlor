@@ -30,8 +30,9 @@ function pizzaSelection() {
   return pizzaOrder;
 }
 
+// This should be the version of the prototype to use, but first must get pizzaSelection() or handleSelection() to talk with constructor.
 PizzaOrder.prototype.assignCost = function() {
-  const pizzaOrder = pizzaSelection();
+  // const pizzaOrder = pizzaSelection(); // This line may not be needed based on tests
   if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "personal") {
     pizzaCost = "$5";
   } else if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "family") {
@@ -44,16 +45,16 @@ PizzaOrder.prototype.assignCost = function() {
   return pizzaCost;
 }
 
-// test a version of assignCost prototype if variables are assigned
+// test a version of assignCost prototype if variables are assigned -- pizzaOrder returns keys topping and size, change pizzaOrder.toppingSelection & pizzaOrder.sizeSelection to pizzaOrder.topping and pizzaOrder.size for test.
 PizzaOrder.prototype.assignCost = function() {
-  let pizzaOrder = new PizzaOrder ("none", "personal");
-  if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "personal") {
+  // let pizzaOrder = new PizzaOrder ("none", "personal"); -- this line seems to cause bug
+  if (pizzaOrder.topping === "none" && pizzaOrder.size === "personal") {
     pizzaCost = "$5";
-  } else if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "family") {
+  } else if (pizzaOrder.topping === "none" && pizzaOrder.size === "family") {
     pizzaCost = "$10";
-  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "personal") {
+  } else if (pizzaOrder.topping === "pepperoni" && pizzaOrder.size === "personal") {
     pizzaCost = "$7";
-  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "family") {
+  } else if (pizzaOrder.topping === "pepperoni" && pizzaOrder.size === "family") {
     pizzaCost = "$12";
   }
   return pizzaCost;

@@ -1,9 +1,9 @@
 Site needs:
-- 1+ toppings -- method of selecting toppings (just one to start: plain and pepperoni)
-- 1+ size -- needs 2 size options
+x 1+ toppings -- method of selecting toppings (just one to start: plain and pepperoni)
+x 1+ size -- needs 2 size options
 x pizza object constructor w/ properties for toppings and size
-- prototype method for cost based on toppings and size
-- method of determining price
+x prototype method for cost based on toppings and size
+x method of determining price
 
 Layout:
 - method of selecting size
@@ -19,3 +19,5 @@ no toppings, personal pizza -- base price: $5
 no toppings, family pizza -- base price $10
 pepperoni, personal -- $2 topping, $5 size -- $7
 pepperoni, family -- $2 topping, $10 size -- $12
+
+3pm 1/27 update: constructor works. HTML shows up. pizzaSelection() works if pizzaOrder object is declared with variables -- not talking to buttons at this point. assignCost prototype works if pizzaOrder object is declared with variables (same issue).
