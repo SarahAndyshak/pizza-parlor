@@ -44,6 +44,22 @@ PizzaOrder.prototype.assignCost = function() {
   return pizzaCost;
 }
 
+// test a version of assignCost prototype if variables are assigned
+PizzaOrder.prototype.assignCost = function() {
+  let pizzaOrder = new PizzaOrder ("none", "personal");
+  if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "personal") {
+    pizzaCost = "$5";
+  } else if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "family") {
+    pizzaCost = "$10";
+  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "personal") {
+    pizzaCost = "$7";
+  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "family") {
+    pizzaCost = "$12";
+  }
+  return pizzaCost;
+}
+
+
 
 // prototype for figure out pizza toppings
 // PizzaOrder.prototype.selectTopping = function() {
@@ -54,27 +70,6 @@ PizzaOrder.prototype.assignCost = function() {
 //   } else if (toppingSelection.value = "pepperoni") {
 //     this.topping = "pepperoni";
 //   }
-// }
-
-//try w/o radio buttons
-// PizzaOrder.prototype.selectTopping = function() {
-//   let toppingSelection = topping;
-//   if (toppingSelection = "none") {
-//     return toppingSelection;
-//   } else if (toppingSelection = "pepperoni") {
-//     return toppingSelection;
-//   } 
-// }
-
-//not sure what to try next
-// PizzaOrder.prototype.selectTopping = function() {
-//   let toppingSelection = topping;
-//   if (toppingSelection.value = "none") {
-//     topping = "none";
-//   } else if (toppingSelection.value = "pepperoni") {
-//     topping = "pepperoni";
-//   }
-//   return topping;
 // }
 
 
