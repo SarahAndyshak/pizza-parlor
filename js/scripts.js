@@ -8,7 +8,7 @@ function PizzaOrder(topping, size) {
 
 // prototype for selecting topping
 PizzaOrder.prototype.chooseTopping = function() {
-  
+
 }
 
 // prototype for selecting size
@@ -16,4 +16,17 @@ PizzaOrder.prototype.chooseTopping = function() {
 // protype for assigning price
 
 
+// is this business or UI logic?
+function handleRadio(event) {
+  event.preventDefault();
+  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  const sizeSelection = document.querySelector("input[name='size']:checked").value;
+}
+
 // User interface logic
+
+
+window.addEventListener("load", function () {
+  this.document.getElementById("radio-topping").addEventListener("submit", handleRadio);
+  this.document.getElementById("radio-size").addEventListener("submit", handleRadio);
+})
