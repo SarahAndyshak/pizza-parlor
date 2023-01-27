@@ -65,6 +65,12 @@ Actual outcome: works if you assign the value with the new PizzaOrder object, ne
 
 Test 2: "It should return the selected topping of the pizzaOrder object."
 Code: let pizzaOrder = let pizzaOrder = new PizzaOrder("pepperoni");
-pizzaOrder.selectTopping():
+pizzaOrder.selectTopping();
 Expected outcome: PizzaOrder {topping: "pepperoni", size: undefined}
 Actual outcome: test fails, function still returns "none." for topping as the result of the function, although pizzaOrder; returns PizzaOrder {topping: 'pepperoni', size: undefined} correctly
+
+Test 2.5: It should return the selected topping of the pizzaOrder object."
+Code: let pizzaOrder = let pizzaOrder = new PizzaOrder("pepperoni");
+pizzaOrder.selectTopping();
+Expected outcome: PizzaOrder {topping: "pepperoni", size: undefined}
+Actual outcome: test fails: tried declaring let topping = "pepperoni" then running function; returns "none"; tried declaring let pizzaOrder = new PizzaOrder("pepperoni") which returns "pepperoni" for pizzaOrder.toppings, but when pizzaOrder.selectTopping(); is run, the value of topping changes to "none".

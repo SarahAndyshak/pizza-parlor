@@ -19,6 +19,7 @@ function PizzaOrder(topping, size) {
 
 //try w/o radio buttons
 PizzaOrder.prototype.selectTopping = function() {
+  let toppingSelection = topping;
   if (toppingSelection = "none") {
     this.topping = "none";
   } else if (toppingSelection = "pepperoni") {
@@ -27,29 +28,29 @@ PizzaOrder.prototype.selectTopping = function() {
   return this.topping;
 }
 
-//prototype for figureing out size
-PizzaOrder.prototype.selectSize = function() {
-  if sizeSelection = "personal" {
-    this.size = "personal";
-  } else if sizeSelection = "family" {
-    this.size = "family";
-  }
-}
+// //prototype for figureing out size
+// PizzaOrder.prototype.selectSize = function() {
+//   if sizeSelection = "personal" {
+//     this.size = "personal";
+//   } else if sizeSelection = "family" {
+//     this.size = "family";
+//   }
+// }
 
 
-// prototype for assigning cost
-PizzaOrder.prototype.assignCost = function() {
+// // prototype for assigning cost
+// PizzaOrder.prototype.assignCost = function() {
 
-}
+// }
 
 
 
 // // is this business or UI logic? --- may not need this?
-function handleRadio(event) {
-  event.preventDefault();
-  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
-  const sizeSelection = document.querySelector("input[name='size']:checked").value;
-}
+// function handleRadio(event) {
+//   event.preventDefault();
+//   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+//   const sizeSelection = document.querySelector("input[name='size']:checked").value;
+// }
 
 // User interface logic
 
