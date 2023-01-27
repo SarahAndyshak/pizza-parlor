@@ -24,9 +24,17 @@ PizzaOrder.prototype.selectTopping = function() {
   } else if (toppingSelection = "pepperoni") {
     this.topping = "pepperoni";
   }
+  return this.topping;
 }
 
 //prototype for figureing out size
+PizzaOrder.prototype.selectSize = function() {
+  if sizeSelection = "personal" {
+    this.size = "personal";
+  } else if sizeSelection = "family" {
+    this.size = "family";
+  }
+}
 
 
 // prototype for assigning cost
