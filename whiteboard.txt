@@ -1,12 +1,15 @@
 Site needs:
 - 1+ toppings -- method of selecting toppings (just one to start: plain and pepperoni)
 - 1+ size -- needs 2 size options
-- pizza object constructor w/ properties for toppings and size
+x pizza object constructor w/ properties for toppings and size
 - prototype method for cost based on toppings and size
 - method of determining price
 
 Layout:
 - method of selecting size
 - method of selecting topping
-- submit button
+x submit button
 - show/hide final price
+
+Need to add selection boxes for topping and size, put those functions into the prototypes
+Then write function or prototype to collect info and return a price. Will need to be if...else format
