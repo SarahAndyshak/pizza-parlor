@@ -17,11 +17,11 @@ function PizzaOrder(topping, size) {
 //   }
 // }
 
+//try w/o radio buttons
 PizzaOrder.prototype.selectTopping = function() {
-  let toppingSelection = document.querySelector("input[name='topping']:checked").value;
-  if (toppingSelection.value = "none") {
+  if (toppingSelection = "none") {
     this.topping = "none";
-  } else if (toppingSelection.value = "pepperoni") {
+  } else if (toppingSelection = "pepperoni") {
     this.topping = "pepperoni";
   }
 }

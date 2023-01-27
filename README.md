@@ -59,6 +59,6 @@ Test passes
 Describe: PizzaOrder.prototype.selectTopping
 
 Test 1: "It should assign a topping selection to the pizzaOrder object."
-Code: let pizzaOrder = let pizzaOrder = new PizzaOrder();
-let toppingSelection.value = "none";
+Code: let pizzaOrder = let pizzaOrder = new PizzaOrder("none");
 Expected Outcome: PizzaOrder {topping: "none", size: undefined}
+Actual outcome: works if you assign the value with the new PizzaOrder object, need a way to populate the value.
