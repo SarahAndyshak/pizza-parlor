@@ -67,3 +67,5 @@ PizzaOrder.prototype.assignCost = function() {
 window.addEventListener("load", function () {
   this.document.getElementById("order").addEventListener("submit", handleSelection);
 })
+
+// I think the .append for cost will need to go here.
