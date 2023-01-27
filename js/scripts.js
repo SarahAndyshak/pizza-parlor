@@ -27,6 +27,7 @@ function PizzaOrder(topping, size) {
 //   } 
 // }
 
+//not sure what to try next
 PizzaOrder.prototype.selectTopping = function() {
   let toppingSelection = topping;
   if (toppingSelection.value = "none") {
