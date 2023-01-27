@@ -1,0 +1,12 @@
+Site needs:
+- 1+ toppings -- method of selecting toppings (just one to start: plain and pepperoni)
+- 1+ size -- needs 2 size options
+- pizza object constructor w/ properties for toppings and size
+- prototype method for cost based on toppings and size
+- method of determining price
+
+Layout:
+- method of selecting size
+- method of selecting topping
+- submit button
+- show/hide final price
