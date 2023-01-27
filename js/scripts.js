@@ -36,6 +36,10 @@ PizzaOrder.prototype.assignCost = function() {
     pizzaCost = "$5";
   } else if (pizzaOrder.toppingSelection === "none" && pizzaOrder.sizeSelection === "family") {
     pizzaCost = "$10";
+  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "personal") {
+    pizzaCost = "$7";
+  } else if (pizzaOrder.toppingSelection === "pepperoni" && pizzaOrder.sizeSelection === "family") {
+    pizzaCost = "$12";
   }
   return pizzaCost;
 }
