@@ -6,7 +6,7 @@ function PizzaOrder(topping, size) {
   this.size = size;
 }
 
-// is this business -- it's getting values for topping and size, adjust to match pizzaSelection()
+// unclear if this is business of UI logic -- it's getting values for topping and size; adjust to match pizzaSelection()
 function handleSelection(event) {
   event.preventDefault();
   const toppingSelection = document.querySelector("input[name='topping']:checked").value;
@@ -64,7 +64,7 @@ PizzaOrder.prototype.assignCost = function() {
 
 window.addEventListener("load", function () {
   this.document.getElementById("order").addEventListener("submit", handleSelection);
+  // does cost display go here, or in handleSelection?
 })
 
-// I think the .append for cost will need to go here, or as part of handleSelection
 // Need to test buttons by using this somewhere: document.querySelector("div#show-price").innerText(pizzaOrder); -- maybe should be document.querySelector("div#show-price").append(pizzaOrder).innerText; ??
