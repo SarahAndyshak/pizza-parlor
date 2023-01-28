@@ -102,6 +102,13 @@ pizzaSelection();
 Expected Outcome: PizzaOrder {topping: 'pepperoni', size: 'personal'}
 Test passes
 
+Test 4: "It should run pizzaOrder.assignCost to actually return the cost on the webpage."
+Code: button settings: const toppingSelection = "pepperoni";
+const sizeSelection = "personal";
+pizzaSelection();
+Expected Outcome: PizzaOrder {topping: 'pepperoni', size: 'personal'} and show "$7" in the provided array below the button.
+Test passes
+
 <!--new prototype-->
 Describe: PizzaOrder.prototype.assignCost
 
