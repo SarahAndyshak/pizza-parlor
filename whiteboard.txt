@@ -21,3 +21,4 @@ pepperoni, personal -- $2 topping, $5 size -- $7
 pepperoni, family -- $2 topping, $10 size -- $12
 
 3pm 1/27 update: constructor works. HTML shows up. pizzaSelection() works if pizzaOrder object is declared with variables -- not talking to buttons at this point. assignCost prototype works if pizzaOrder object is declared with variables (same issue). When pizzaSelection() is run, it creates a pizzaOrder object, but that object isn't recognized by the console in testing. (3:21pm)
+4:12pm, not seeing any solutions, seems like css won't be needed unless actually formatting the HTML.
