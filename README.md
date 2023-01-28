@@ -57,7 +57,7 @@ pizzaOrder;
 Expected Outcome: empty pizzaOrder object: PizzaOrder {topping: undefined, size: undefined}
 Test passes
 
-<!--new prototype-->
+<!--new prototype--ended up not using this-->
 Describe: PizzaOrder.prototype.selectTopping
 
 Test 1: "It should assign a topping selection to the pizzaOrder object."
@@ -95,6 +95,13 @@ Expected Outcome: topping selection: pepperoni, size selection: personal, PizzaO
 Key difference: added let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection)
   return pizzaOrder; in order to produce a new pizzaOrder object.
 
+Test 3: "It should return a topping and size based on radio button selection."
+Code: button settings: const toppingSelection = "pepperoni";
+const sizeSelection = "personal";
+pizzaSelection();
+Expected Outcome: PizzaOrder {topping: 'pepperoni', size: 'personal'}
+Test passes
+
 <!--new prototype-->
 Describe: PizzaOrder.prototype.assignCost
 
@@ -115,3 +122,4 @@ Code: let pizzaOrder = pizzaSelection("none", "personal");
 pizzaOrder.assignCost();
 Expected Outcome: "$5"
 Actual Outcome: test passed, when the constructor was called and properties were assigned. Tested with other variables inputted, also passed.
+
