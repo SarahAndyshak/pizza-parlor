@@ -9,11 +9,13 @@ function PizzaOrder(topping, size) {
 // unclear if this is business of UI logic -- it's getting values for topping and size; adjust to match pizzaSelection()
 function handleSelection(event) {
   event.preventDefault();
-  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  const toppingSelection = document.forms["order"]["topping"].value;
   console.log("topping selection: ", toppingSelection);
-  const sizeSelection = document.querySelector("input[name='size']:checked").value;
+  const sizeSelection = document.forms["order"]["size"].value;
+  //const sizeSelection = document.querySelector("input[name='size']:checked").value;
   console.log("size selection: ", sizeSelection);
   let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection);
+  console.log(pizzaOrder);
   return pizzaOrder;
   // document.querySelector("div#show-price").append("cost"); // this isn't working, buttons don't seem to be functioning
 }
