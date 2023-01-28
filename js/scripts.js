@@ -66,5 +66,5 @@ window.addEventListener("load", function () {
   this.document.getElementById("order").addEventListener("submit", handleSelection);
 })
 
-// I think the .append for cost will need to go here.
-// Need to test buttons by using this somewhere: document.querySelector("div#show-price").innerText(pizzaOrder);
+// I think the .append for cost will need to go here, or as part of handleSelection
+// Need to test buttons by using this somewhere: document.querySelector("div#show-price").innerText(pizzaOrder); -- maybe should be document.querySelector("div#show-price").append(pizzaOrder).innerText; ??
