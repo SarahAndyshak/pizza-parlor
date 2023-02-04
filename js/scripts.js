@@ -4,21 +4,9 @@
 function PizzaOrder(topping, size) {
   this.topping = topping;
   this.size = size;
+  this.cost = 0; 
 }
 
-// unclear if this is business of UI logic -- it's getting values for topping and size; adjust to match pizzaSelection()
-function pizzaSelection(event) {
-  event.preventDefault();
-  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
-  // console.log("topping selection: ", toppingSelection);
-  const sizeSelection = document.querySelector("input[name='size']:checked").value;
-  // console.log("size selection: ", sizeSelection);
-  let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection);
-  // console.log(pizzaOrder);
-  pizzaOrder.assignCost();
-}
-
-// This should be the version of the prototype to use, but first must get pizzaSelection() or handleSelection() to talk with constructor.
 PizzaOrder.prototype.assignCost = function() {
   if (this.topping === "none" && this.size === "personal") {
     pizzaCost = "$5";
@@ -29,10 +17,20 @@ PizzaOrder.prototype.assignCost = function() {
   } else if (this.topping === "pepperoni" && this.size === "family") {
     pizzaCost = "$12";
   }
-  document.querySelector("div#show-price").innerText = pizzaCost;
+  this.cost = pizzaCost;
+  return this.cost;
 }
 
 // User interface logic
+
+function pizzaSelection(event) {
+  event.preventDefault();
+  const toppingSelection = document.querySelector("input[name='topping']:checked").value;
+  const sizeSelection = document.querySelector("input[name='size']:checked").value;
+  let pizzaOrder = new PizzaOrder(toppingSelection, sizeSelection);
+  pizzaOrder.assignCost();
+  document.querySelector("div#show-price").innerText = pizzaOrder.cost;
+}
 
 window.addEventListener("load", function () {
   this.document.getElementById("order").addEventListener("submit", pizzaSelection);
